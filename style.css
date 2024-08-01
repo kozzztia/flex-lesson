@@ -1,17 +1,28 @@
 :root {
-    font-size: 10px;
+    font-size: calc(10px + .5vw);
     font-family: Inter, sans-serif;
-    /* vars */
+    /* colors*/
     --primary-dark: #043873;
     --primary-light: #4F9CF9;
     --text-color-dark: #212529;
     --text-color-lihgt: #FFFFFF;
     --decoration-color-dark: #A7CEFC;
     --decoration-color-light: #FFE492;
+    /* sizes */
+    --padding: 2rem
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body{
+    background: var(--primary-dark);
+}
+img{
+    width: 20rem;
+    height: 5rem;
+    background: red;
 }
