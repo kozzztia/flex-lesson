@@ -1,0 +1,17 @@
+:root {
+    font-size: 10px;
+    font-family: Inter, sans-serif;
+    /* vars */
+    --primary-dark: #043873;
+    --primary-light: #4F9CF9;
+    --text-color-dark: #212529;
+    --text-color-lihgt: #FFFFFF;
+    --decoration-color-dark: #A7CEFC;
+    --decoration-color-light: #FFE492;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
