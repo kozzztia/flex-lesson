@@ -6,7 +6,7 @@ fi
 
 # git init
 # git add .
-# git commit -m "$1"
+# git commit -m "initial commit"
 # git branch -M main
 # git remote add origin git@github.com:kozzztia/flex-lesson.git
 # git push -u origin main
