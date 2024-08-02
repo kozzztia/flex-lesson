@@ -22,11 +22,9 @@
     box-sizing: border-box;
 }
 
-body{
-    
-}
+body {}
 
-header{
+header {
     width: 100%;
     padding: var(--padding);
     background: var(--primary-dark);
@@ -35,42 +33,127 @@ header{
     align-items: stretch;
     justify-content: space-between;
 
-    img{
+    img {
         width: 13rem;
         height: auto;
     }
 
-    ul{
+    ul {
         display: none;
         visibility: hidden;
     }
-    nav{
+
+    nav {
         display: none;
         visibility: hidden;
     }
 }
 
-.burger{
-    width: 4.2rem;
+.burger {
+    padding: .2rem;
+    width: 4rem;
     border: none;
     background: inherit;
     position: relative;
-    div{
-        width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--transition);
+    transform: rotate(0);
+
+    div {
+        width: 4rem;
         height: .2rem;
-        background: var(--primary-light);
+        background: var(--decoration-color-light);
         position: absolute;
         left: 0;
+        transform: rotate(0);
+        transition: var(--transition);
     }
-    div:first-child{
+
+    div:first-child {
         top: 0;
     }
-    div:nth-child(2){
+
+    div:nth-child(2) {
         top: 50%;
-        left: 50%;
+        left: 2rem;
         transform: translate(-50%, -50%)
     }
-    div:last-child{
+
+    div:last-child {
         bottom: 0;
+    }
+
+    /* &:focus {
+        div:first-child {
+            transform: rotate(45deg) translate(5px, 10px);
+            left: 10px;
+        }
+
+        div:nth-child(2) {
+            display: none;
+            visibility: hidden;
+        }
+
+        div:last-child {
+        transform: rotate(-45deg) translate(5px, -10px);
+        left: 10px;
+        }
+
+    } */
+
+    &:hover {
+        div:first-child {
+            transform: rotate(45deg)translate(0, -5px);
+            left: -10px;
+        }
+
+        div:nth-child(2) {
+            left: -20px;
+        }
+
+        div:last-child {
+            transform: rotate(-45deg) translate(0, 5px);
+            left: -10px;
+        }
+    }
+
+    &:hover:is(:focus) {
+        div:first-child {
+            transform: rotate(-45deg)translate(0, -5px);
+            left: 10px;
+        }
+
+        div:nth-child(2) {
+            left: 100px;
+        }
+
+        div:last-child {
+            transform: rotate(45deg) translate(0, 5px);
+            left: 10px;
+        }
+    }
+
+    &:focus-visible {
+        border: none;
+        outline: none;
+    }
+
+    &:focus {
+        div:first-child {
+            transform: rotate(45deg) translate(5px, 10px);
+            left: 10px;
+        }
+
+        div:nth-child(2) {
+            display: none;
+            visibility: hidden;
+        }
+
+        div:last-child {
+            transform: rotate(-45deg) translate(5px, -10px);
+            left: 10px;
+        }
+
     }
 }
