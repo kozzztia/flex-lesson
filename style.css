@@ -141,7 +141,7 @@ header {
 
     &:focus {
         div:first-child {
-            transform: rotate(45deg) translate(5px, 10px);
+            transform: rotate(45deg) translate(0px, 10px);
             left: 10px;
         }
 
@@ -151,7 +151,7 @@ header {
         }
 
         div:last-child {
-            transform: rotate(-45deg) translate(5px, -10px);
+            transform: rotate(-45deg) translate(0px, -10px);
             left: 10px;
         }
 
