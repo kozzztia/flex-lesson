@@ -24,6 +24,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     background: #fff;
 }
@@ -143,19 +144,19 @@ header {
 
     }
 }
+button:not(.burger) {
+    border: none;
+    outline: none;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 2rem;
+    background: var(--primary-light);
+    color: inherit
+}
 
 main {
     width: 100%;
     color: var(--text-color-lihgt);
-
-    button {
-        border: none;
-        outline: none;
-        padding: 20px 40px;
-        border-radius: 8px;
-        background: var(--primary-light);
-        color: inherit
-    }
 }
 
 .banner,
@@ -167,9 +168,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     padding: 1.6rem;
 
     article {
+        height: inherit;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -344,8 +347,28 @@ main {
     }
 
     header {
-        ul {display: block; visibility: visible;}
+        ul {
+            display: block;
+            visibility: visible;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 10px;
+            li{
+                font-size: 3rem;
+                color: var(--text-color-lihgt);
+                cursor: pointer;
+            }
 
+        }
+        .nav{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        img {width: 200px;}
         nav {display: block; visibility: visible;}
     }
 
@@ -354,7 +377,9 @@ main {
     .work,
     .extension {
         article{
+            flex-basis: 30%;
             h1,h2{
+                margin-top: 0;
                 font-size: 7rem;
             }
             p{
